@@ -36,16 +36,30 @@
 
 // didn't work
 
+//Using propmts
+
 const prompted = require('prompt');
+const prompting = require('prompt-sync')({sigint: true});
 
-prompted.start();
+    let gitHubUserName;
+    let emailAddress;
+ 
 
-prompted.get(['What is your name', 'what is your favorite colour'], function(err, result){
-    if (err) {return onError(err);}
-    console.log(result);
-})
 
-function onError(err){
-    console.log(err);
-    return 1;
-}
+// prompted.start();
+
+// prompted.get(["Git Hub User Name", "email Address"], function(err, result){
+//     if (err) {return onError(err);}
+//     console.log(result)
+// })
+
+// function onError(err){
+//     console.log(err);
+//     return 1;
+// }
+
+gitHubUserName = prompting('What is your git hub user name');
+console.log(gitHubUserName)
+emailAddress = prompting('What is your email')
+console.log(emailAddress)
+console.log(`Your git hub is ${gitHubUserName} and you can be reached at ${emailAddress}`)
