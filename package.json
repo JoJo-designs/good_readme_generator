@@ -1,0 +1,26 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "package files",
+  "main": "index.js",
+  "scripts": {
+    "test": "testThis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoJo-designs/good_readme_generator.git"
+  },
+  "keywords": [
+    "readme",
+    "good"
+  ],
+  "author": "JoJo-designs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoJo-designs/good_readme_generator/issues"
+  },
+  "homepage": "https://github.com/JoJo-designs/good_readme_generator#readme",
+  "dependencies": {
+    "prompt": "^1.1.0"
+  }
+}
