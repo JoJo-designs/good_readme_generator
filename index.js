@@ -16,34 +16,22 @@
                         // Github user name and email with instraction to reach the user for more info
 
 
-//try a frist question with a readable string function
-
-// const readline = require("readline")
-// const readable = readline.createInterface({
-//     input: process.stringin,
-//     output: process.stringout
-// });
-
-// readable.question("Your cool name", function(coolName){
-//     console.log(`users really cool name is${coolName}`);
-//     readable.close();
-// });
-
-// readable.on("close", function(){
-//     console.log("Done");
-//     process.exit(0);
-// });
-
-// didn't work
-
 //Using propmts
 
 const prompted = require('prompt');
 const prompting = require('prompt-sync')({sigint: true});
+const createfile = require('fs');
 
+    let title;
     let gitHubUserName;
     let emailAddress;
- 
+    let description;
+    let installation;
+    let usage;
+    let license;
+    let contributing;
+    let test;
+    let question;
 
 
 // prompted.start();
@@ -58,8 +46,18 @@ const prompting = require('prompt-sync')({sigint: true});
 //     return 1;
 // }
 
-gitHubUserName = prompting('What is your git hub user name');
+userWelecome = prompting('What is your name?');
+console.log(`Welcome${userWelecome} to this porfessional readme generator.`)
+gitHubUserName = prompting('What is your Github user name');
 console.log(gitHubUserName)
 emailAddress = prompting('What is your email')
 console.log(emailAddress)
-console.log(`Your git hub is ${gitHubUserName} and you can be reached at ${emailAddress}`)
+//console.log(`Your git hub is ${gitHubUserName} and you can be reached at ${emailAddress}`)
+description = prompting('What does your program do');
+console.log(description)
+
+
+
+createfile.appendFile('log.txt', `${gitHubUserName} and ${emailAddress} plus ${description}\n`, (err) =>
+  err ? console.error(err) : console.log('Commit logged!')
+);
