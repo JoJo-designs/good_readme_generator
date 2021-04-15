@@ -46,18 +46,34 @@ const createfile = require('fs');
 //     return 1;
 // }
 
-userWelecome = prompting('What is your name?');
-console.log(`Welcome${userWelecome} to this porfessional readme generator.`)
-gitHubUserName = prompting('What is your Github user name');
-console.log(gitHubUserName)
-emailAddress = prompting('What is your email')
-console.log(emailAddress)
-//console.log(`Your git hub is ${gitHubUserName} and you can be reached at ${emailAddress}`)
-description = prompting('What does your program do');
-console.log(description)
+// prompted for info
+//Ask for a name first not nessasary but a firendly welcome
+userWelecome = prompting('What is your name? ');
+      console.log(`Welcome ${userWelecome} to this porfessonal readme generator. 
+      Fill in the information as prompted to build a professonal README.md file`)
+//Rest of the questions
+      title = prompting('What is the title of your project? ');
+      gitHubUserName = prompting('What is your Github user name? ');
+      emailAddress = prompting('What is your email? ')
+      description = prompting('What does your program do? ');
+console.log("Generating File...")
 
 
-
-createfile.appendFile('log.txt', `${gitHubUserName} and ${emailAddress} plus ${description}\n`, (err) =>
-  err ? console.error(err) : console.log('Commit logged!')
+// builds file with data given by the user.
+createfile.writeFile('log.md', `<h1>${title}</h1>\n
+<h3>description</h3>\n
+${description}\n
+<h3>table of content</h3>\n
+<ul>
+<li>Installation</li>\n<li>Usage</li>\n<li>License</li>\n<li>Contributing</li>\n<li>Tests</li>\n<li>Questions</li>
+</ul>\n
+<h3>Installation</h3>\n
+<h3>Usage</h3>\n
+<h3>Licence</h3>\n
+<h3>Conributing</h3>\n
+<h3>Test</h3>\n
+<h3>Questions</h3>\n`, (err) =>
+  err ? console.error(err) : console.log('file generated')
 );
+
+//Cheat sheet for markdown stuff might be useful https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
