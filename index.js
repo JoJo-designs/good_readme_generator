@@ -44,9 +44,8 @@ inqui
     {
       type: 'list',
       message: 'which license is this application under? ',
-      choices: ["CC0", "Apache-2.0", "c", "d"],
+      choices: ["CC0", "Apache", "MIT", "d"],
       name: 'license',
-      //when: (answers) => answers.isCc0 === CCO,
     },
     {
       type: 'input',
@@ -63,6 +62,7 @@ inqui
 
   .then((data) =>
   createfile.writeFile('Read.md', `# ${data.projectTitle}
+  [![Licens](https://img.shields.io/badge/License-${data.license}%202.0-blue.svg)](https://opensource.org/licenses/${data.license})
   ### Description
   ${data.description}
   ### Table of Content
@@ -78,25 +78,29 @@ inqui
   ${data.usage}
   ### License
   ##### Type of license ${data.license}
-  Projects with the ${data.license} allow users to 
+  Projects with the ${data.license} license allow ${checktype(data.license)} 
   ### Contributing
   ${data.contributing}
   ### Test
   ${data.testing}
   ### Questions
-  Github: ${data.gitHub}
+  [${data.gitHub}](href='https://github.com/${data.gitHub}')
   Please contact ${data.email} with any questions`, (err) =>
   err ? console.error(err) : console.log('complete')
 )
 );
 
-var checktype = (data) => {
-  if (data.license === "CC0") {
-    type = "copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission"
-  } else if (data.license === "Apache20") {
-    type = Apache20
+var checktype = (license) => {
+  if (license === "CC0") {
+    return "users to copy, modify, distribute and perform the work, even for commercial purposes, without asking permission.\n ##### For a full overview please visit\n https://creativecommons.org/publicdomain/zero/1.0/legalcode "
+  } else if (license === "Apache") {
+    return "users to reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that users meet the conditions.\n ##### For a full overview please vist\n https://opensource.org/licenses/Apache-2.0"
+  } else if (license === "MIT") {
+    return "are free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to conditions.\n ##### For a full overview please vist\n https://opensource.org/licenses/MIT"
+  } else {
+    return "no value yet"
   }
-}
+};
 
 //Cheat sheet for markdown stuff might be useful https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
 // links https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
