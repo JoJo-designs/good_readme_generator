@@ -59,7 +59,7 @@ inqui
 
 
   .then((data) =>
-  createfile.writeFile('Read.md', `# ${data.projectTitle}
+  createfile.writeFile('./output/Read.md', `# ${data.projectTitle}
   [![Licens](https://img.shields.io/badge/License-${data.license}%202.0-blue.svg)](https://opensource.org/licenses/${data.license})
   ### Description
   ${data.description}
@@ -84,7 +84,7 @@ inqui
   ### Questions
   [${data.gitHub}](https://github.com/${data.gitHub})
   Please contact ${data.usersName} at ${data.email} with any questions`, (err) =>
-  err ? console.error(err) : console.log('complete')
+  err ? console.error(err) : console.log('Readme file')
 )
 );
 
