@@ -21,9 +21,7 @@
   },
   "homepage": "https://github.com/JoJo-designs/good_readme_generator#readme",
   "dependencies": {
-    "inquirer": "^8.0.0",
-    "prompt": "^1.1.0",
-    "prompt-sync": "^4.2.0"
+    "inquirer": "^8.0.0"
   },
   "devDependencies": {}
 }
