@@ -18,7 +18,7 @@
   ### Installation
   Does your program need to be installed or have extra dependencies? Tell the reader what they need to know about making it work.
   ### Usage
-  Simple, firendly and super easy to use. Tell the reader about how great it is using you program. 
+  Simple, firendly and super easy to use. Tell the reader about how great it is using your program. 
   ### License
   ##### Type of license CC0
   Projects with the CC0 license allows users to copy, modify, distribute and perform the work, even for commercial purposes, without asking permission.
