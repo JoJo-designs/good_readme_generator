@@ -42,7 +42,7 @@ inqui
     {
       type: 'list',
       message: 'which license is this application under?',
-      choices: ["CC0", "Apache", "MIT", "d"],
+      choices: ["CC0", "Apache", "MIT"],
       name: 'license',
     },
     {
@@ -59,17 +59,17 @@ inqui
 
 
   .then((data) =>
-  createfile.writeFile('./output/Read.md', `# ${data.projectTitle}
+  createfile.writeFile('./output/README.md', `# ${data.projectTitle}
   [![Licens](https://img.shields.io/badge/License-${data.license}%202.0-blue.svg)](https://opensource.org/licenses/${data.license})
   ### Description
   ${data.description}
   ### Table of Content
-  [Installation](#Installation)
-  [Usage](#Usage)
-  [License](#License)
-  [Contributing](#Contributing)
-  [Test](#Test)
-  [Questions](#Questions)
+  [Installation](#Installation)\n
+  [Usage](#Usage)\n
+  [License](#License)\n
+  [Contributing](#Contributing)\n
+  [Test](#Test)\n
+  [Questions](#Questions)\n
   ### Installation
   ${data.installation}
   ### Usage
@@ -100,6 +100,4 @@ var checktype = (license) => {
   }
 };
 
-//Cheat sheet for markdown stuff might be useful https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
-// links https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
