@@ -16,7 +16,7 @@
   [Questions](#Questions)
 
   ### Installation
-  In order to use this program the user will need node.js installed and a copy of the repo file. users can odtain a copy by forking the repo to thier own github profile then cloneing the file onto thier computer.
+  In order to use this program the user will need node.js installed and a copy of the repo file. users can obtain a copy by forking the repo to thier own github profile then cloneing the file onto thier computer.
   ### Usage
   To use the program the user will need to first open the file inside a terminal. Users need to make sure they opened the folder called good_readme_generator or they will get an error when they try to use it. If the program hasn't been run before the user will need to call in addtional files, using the teminal type npm install and press enter. This will automatically add the additional files this step can be skipped if the program has been run before. To start the program the user will need to type node index.js and press enter. When the program starts the user just need to responed to the questions and press enter until all the questions are done. Questions do not need a response to move on. On completeion the file will be generated and saved into the output folder. 
   ##### Notice 
