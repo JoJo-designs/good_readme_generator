@@ -30,4 +30,4 @@
   Make sure the program is being tested the right way tell readers about the testing.
   ### Questions
   [JoJo-Designs](https://github.com/JoJo-Designs)
-  Please contact Jodi at thisisafake.@email.com with any questions
+  Please contact Jodi at thisisafake.@email.com with any questions.
